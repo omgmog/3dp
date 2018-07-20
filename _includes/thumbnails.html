@@ -1,0 +1,26 @@
+{% if include.thumbs %}
+{% capture limit %}{% if include.limit %}{{ include.limit }}{% else %}100{%endif%}{%endcapture%}
+{% assign limit = limit | plus:0 %}
+{% assign total = include.thumbs.size | plus:0 %}
+<div class="thumbnails{% if include.big %} big{% endif %}">
+{% for thumb in include.thumbs limit:limit %}
+  <div class="thumb">
+  	{% if include.clickable == "True" %}
+    <a class="thumb-inner" 
+    href="/images/full/{{ thumb.url }}"
+    style="background-image: url(/images/thumbs/{{ thumb.url }})">
+    </a>
+  	{% else %}
+    <div class="thumb-inner" 
+    style="background-image: url(/images/thumbs/{{ thumb.url }})">
+    </div>
+  	{% endif %}
+  </div>
+{% endfor %}
+{% if total > limit %}
+	<div class="thumb thumb-small thumb-text">
+	<span>{{ total | minus:limit }}</span> more
+	</div>
+{% endif %}
+</div>
+{% endif %}

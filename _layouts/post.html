@@ -1,6 +1,55 @@
 ---
-layout: page
+layout: default
 ---
 
-<h2>{{ page.title }}</h2>
-{{ content }}
+<section class="single-wrap">
+  <article class="single-content" itemscope itemtype="http://schema.org/BlogPosting">
+    <h1 class="page-title" itemprop="name headline">{{ page.title }}</h1>
+    <div class="feat">
+      <h5 class="page-date">
+        <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+          {{ page.date | date_to_long_string }}
+        </time>
+      </h5>
+    </div>
+    <div itemprop="articleBody">
+      {{ content }}
+    </div>
+      {% if page.videos %}
+        {% for video in page.videos %}
+          <div class="video-wrapper">
+            <video src="/images/full/{{ video.url }}" controls></video>
+          </div>
+        {% endfor %}
+      {% endif %}
+      {% include thumbnails.html thumbs=page.thumbnails clickable="True" big="True" %}
+    <div>
+      {% if page.related %}
+        <h4>Related posts</h4>
+        <ul lass="related">
+          {% for link in page.related %}
+              {% for _post in site.posts %}
+                {% capture target %}_posts/{{ link }}{%endcapture %}
+                {% if _post.path == target %}
+                  <li><a href="{{ _post.url }}">{{ _post.title }}</a></li>
+                {% endif %}
+              {% endfor %}
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+  </article>
+</section>
+
+<div class="pagination">
+  {% if page.next %}
+  <a href="{{ site.baseurl }}{{ page.next.url }}" class="newer">Newer</a>
+  {% else %}
+  <span class="next">Newer</span>
+  {% endif %}
+  {% if page.previous %}
+  <a href="{{ site.baseurl }}{{ page.previous.url }}" class="older">Older</a>
+  {% else %}
+  <span class="previous">Older</span>
+  {% endif %}
+</div>

@@ -13,25 +13,48 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: OMG3DP!
-subtitle: Adventures in 3D Printing
+name: OMG3DP!
+description: Adventures in 3D Printing
 email: hello@maxglenister.co.uk
 author: Max Glenister
+author-bio:  For my day job I work as the Lead UX & Front-end developer at Aris Technologies. In my free time I write about code and technology, curate the UX of VR website and organize hack days. <br><br>If you hadn't noticed, I also have an interest in 3D printing!
 avatar: assets/images/avatar.jpg
-description: > # this means to ignore newlines until "baseurl:"
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Social settings
-github_url: https://github.com/omgmog
-twitter_url: https://twitter.com/omgmog
-thingiverse_url: https://www.thingiverse.com/omgmog
+github: omgmog
+twitter: omgmog
+thingiverse: omgmog
 
 # Google Analytics Tracking ID goes here:
-google_analytics:
+ga_tracking_id:
 
 # Build settings
 markdown: kramdown
+permalink: pretty
+highlighter: rouge
+
+
+
+paginate: 20
+paginate_path: "/page/:num"
+
 gems:
   - jekyll-feed
+  - jekyll-paginate
+  - rouge
+
+sass:
+  sass_dir: _scss
+  style: :compressed
+
+
+defaults:
+  -
+    scope:
+      type: "posts"
+    values:
+      layout: post
+      classes: post
