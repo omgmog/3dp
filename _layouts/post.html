@@ -17,8 +17,12 @@ layout: default
     </div>
       {% if page.videos %}
         {% for video in page.videos %}
-          <div class="video-wrapper">
-            <video src="/images/full/{{ video.url }}" controls></video>
+          <div class="video-wrapper {{ video.ar | default: 'landscape' }}">
+            {% if video.url contains 'youtube' %}
+              <iframe src="{{ video.url }}" frameborder="0"></iframe>
+            {% else %}
+            <video src="/images/full/{{ video.url }}" controls muted>Sorry, your browser doesn't support embedded videos. Here's a direct link to the video: <a href="/images/full/{{ video.url }}">{{video.url}}</a></video>
+            {% endif %}
           </div>
         {% endfor %}
       {% endif %}
