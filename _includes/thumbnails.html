@@ -6,12 +6,12 @@
 {% for thumb in include.thumbs limit:limit %}
   <div class="thumb">
   	{% if include.clickable == "True" %}
-    <a class="thumb-inner" 
+    <a class="thumb-inner"
     href="/images/full/{{ thumb.url }}"
     style="background-image: url(/images/thumbs/{{ thumb.url }})">
     </a>
   	{% else %}
-    <div class="thumb-inner" 
+    <div class="thumb-inner"
     style="background-image: url(/images/thumbs/{{ thumb.url }})">
     </div>
   	{% endif %}
@@ -19,7 +19,9 @@
 {% endfor %}
 {% if total > limit %}
 	<div class="thumb thumb-small thumb-text">
-	<span>{{ total | minus:limit }}</span> more
+    <div class="thumb-inner">
+    	<span>{{ total | minus:limit }}</span> more
+    </div>
 	</div>
 {% endif %}
 </div>

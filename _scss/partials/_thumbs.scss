@@ -3,14 +3,12 @@ $bigSize: 10em;
 
 .thumbnails {
   display: flex;
-  float: right;
-  flex-wrap: wrap;
+  flex: 1;
+  justify-content: flex-end;
 
   @media (max-width: 942px) {
-    float: none;
-    order: 3;
-    margin-top: $spacing-s;
-    margin-left: -1 * $spacing-xs;
+    justify-content: flex-start;
+    flex-wrap: wrap;
   }
 
   .thumb {
@@ -18,25 +16,18 @@ $bigSize: 10em;
     overflow: hidden;
     background: $bg-color;
     flex-shrink: 0;
-    margin-left: $spacing-s;
-    margin-bottom: $spacing-s;
+    margin: $spacing-xs;
     width: $baseSize;
-    height: $baseSize;
+    height: auto;
+
+    &:before {
+      content: '';
+      float: left;
+      padding-top: 100%;
+    }
 
     @media (max-width: 942px) {
       margin: $spacing-xs;
-    }
-
-    &-text {
-    	display: flex;
-    	justify-content: center;
-    	align-items: center;
-    	color: $main-color;
-      flex-direction: column;
-
-      span {
-        font-size: 1.5em;
-      }
     }
 
     .thumb-inner {
@@ -55,12 +46,29 @@ $bigSize: 10em;
       margin: $spacing-xs / 2;
       transition: .2s;
     }
+    &-text {
+      .thumb-inner {
+        color: $main-color;
+        flex-direction: column;
+      }
+      span {
+        font-size: 1.5em;
+      }
+    }
+
   }
 
   &.big {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
     .thumb {
-      width: $bigSize;
-      height: $bigSize;
+      box-shadow: 0 2px 5px rgba(0,0,0,.2);
+      flex-basis: calc(33% - #{$spacing-s});
+
+      &:only-child {
+        flex-basis: 50%;
+      }
     }
   }
 }

@@ -159,17 +159,6 @@
   display: inline;
 }
 
-.single-content {
-  .thumbnails {
-    float: none;
-    margin-left: -1 * $spacing-xs;
-
-    .thumb {
-      box-shadow: 0 2px 5px rgba(0,0,0,.2);
-    }
-  }
-}
-
 .video-wrapper {
   position: relative;
   height: 0;

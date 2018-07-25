@@ -23,9 +23,6 @@
       }
       &:hover {
         background: lighten($main-color, 3%);
-        .inner {
-          transform: translateX($spacing-s);
-        }
       }
       @media (max-width: 942px) {
         padding: $spacing-m $spacing-m;
@@ -34,12 +31,13 @@
         display: inline;
         margin: $spacing-xs 0 0;
         font-size: 2em;
+        line-height: 1.2;
       }
       .inner {
-        transition: all .15s ease-in;
+        display: flex;
+        flex-direction: row;
 
         @media (max-width: 942px) {
-          display: flex;
           flex-direction: column;
         }
       }
