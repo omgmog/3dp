@@ -1,12 +1,24 @@
 ---
 layout: post
-title: New Filament
+title: New Filament!
+thumbnails:
+  - url: 109976044-origpic-e41fa1.jpg
+  - url: IMG_20180205_101112.jpg
+  - url: IMG_20180205_102452.jpg
+  - url: IMG_20180205_120002.jpg
+  - url: IMG_20180205_160024.jpg
 ---
 
-Prima Filaments PV-PLA-175-1000-NA PrimaValue PLA Filament, 1.75 mm, 1 kg Spool, Natural
+I bought some new filament! The 1kg of black that came with the printer has lasted me about 3 months, and so it was time to buy some more.
 
-Huge improvement over the black filament that came with the printer.
+I didn't look exhaustively for filament, I just looked on Amazon at some reviews and found a colour I liked at a price that I liked, and got it delivered the next day with Amazon Prime.
 
-Keycap
+I've gone for: [Prima Filaments PV-PLA-175-1000-NA](https://www.3dprima.com/filament/primavalue-pla-filament-1-75mm-1-kg-spool-natural/a-22261/)
 
-Handles for a rocking horse
+I've not got much evidence (other than anecdotal) but this seems like a huge improvement over the black filament that came with the printer.
+
+I printed a Cherry MX keycap for the first print with this new filament, and ended up with a nice transition from black to clear as the last of the black filament was flushed out of the hotend.
+
+I also designed and printed some super grippy handles for a rocking horses (long story), and they turned out great.
+
+You'll obviously be seeing more of this filament over the next couple of months.
