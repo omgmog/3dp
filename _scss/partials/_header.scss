@@ -1,11 +1,13 @@
 header {
   width: 100%;
-  background: white;
+  background-color: white;
+  background-image: url(../assets/img/icons.png);
+
 
   .post & {
-    background: $main-color;
+    background-color: $main-color;
     color: #fff;
-    border-bottom: .1em solid darken($main-color, 6%);
+    border-bottom: .1em solid $secondary-color;
   }
 }
 

@@ -4,11 +4,11 @@
   li {
     display: inline-block;
     width: 100%;
-    border-bottom: .1em solid darken($main-color, 6%);
+    border-bottom: 2px solid $secondary-color;
     line-height: 1.2;
 
     &:first-child {
-      border-top: .1em solid darken($main-color, 6%);
+      border-top: 2px solid $secondary-color;
     }
 
     .p-wrap {
@@ -44,7 +44,7 @@
     } // end .p-wrap
 
     time {
-      color: darken($main-color, 20%);
+      color: rgba(#fff, .3);
       display: block;
     }
 
