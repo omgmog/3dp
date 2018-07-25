@@ -35,30 +35,6 @@ header {
       display: block;
     }
   } // end h1.title
-
-  .close {
-    .lines {
-      background: transparent;
-
-      &::before,
-      &::after {
-        top:0;
-        width: 30px;
-        transition:         transform .3s ease;
-      }
-
-      &::before {
-        transform:         rotate(45deg);
-        margin: 0;
-      }
-
-      &::after {
-        transform:         rotate(-45deg);
-        margin: 0;
-      }
-
-    } // end .lines
-  } // end .close
 } // end .h-wrap
 
 .menu-icon {
@@ -77,8 +53,20 @@ header {
     position: relative;
     width: 25px;
     height: 2px;
-    background: $text-color;
     border-radius: 20px;
+
+    &,
+    &::before,
+    &::after {
+      background-color: $link-color;
+    }
+    .post & {
+      &,
+      &::before,
+      &::after {
+        background-color: $bg-color;
+      }
+    }
 
     &::before,
     &::after {
@@ -88,7 +76,6 @@ header {
       left: 0;
       width: 25px;
       height: 2px;
-      background: $text-color;
       border-radius: 20px;
 
       transition: all .3s ease;
@@ -96,19 +83,30 @@ header {
 
     &::before { top: 8px; }
     &::after { top: -8px; }
-
-    &.toggled {
-      background: transparent;
-      &::before {
-        transform:         translateX(-8px) rotate(45deg);
-      }
-      &::after {
-        top: 0;
-        transform:         translateX(8px) rotate(-45deg);
-      }
-    }
   } // .lines
 
+
+    &.close {
+      .lines {
+        background: transparent;
+
+        &::before,
+        &::after {
+          top:0;
+          width: 30px;
+          transition:         transform .3s ease;
+          background-color: $link-color
+        }
+        &::before {
+          transform:         rotate(45deg);
+          margin: 0;
+        }
+        &::after {
+          transform:         rotate(-45deg);
+          margin: 0;
+        }
+      }
+    }
 } // end .menu-icon
 
 
