@@ -1,6 +1,6 @@
 ---
 layout: post
-title: An audio amp
+title: An Audio Amp v1.0
 thumbnails:
   - url: amp_board.jpg
   - url: screen-shot-2018-07-25-at-21.02.53.jpg
