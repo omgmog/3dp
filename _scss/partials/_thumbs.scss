@@ -65,9 +65,17 @@ $bigSize: 10em;
     .thumb {
       box-shadow: 0 2px 5px rgba(0,0,0,.2);
       flex-basis: calc(33% - #{$spacing-s});
+      flex-grow: 1;
+      box-sizing: border-box;
 
+      // only 1
       &:only-child {
         flex-basis: 50%;
+      }
+      // only 2
+      &:nth-last-child(2):first-child,
+      &:nth-last-child(2):first-child ~ .thumb {
+        flex-basis: calc(50% - #{$spacing-s})
       }
     }
   }
