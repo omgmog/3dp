@@ -12,7 +12,9 @@
       <meta http-equiv="content-language" content="en-gb" />
       <meta name="description" content="{{ site.description }}">
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-      <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700|Lora:400,700,400italic" rel="stylesheet" type="text/css">
+      <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700|Share+Tech+Mono" rel="stylesheet" type="text/css">
+
+
       <link rel="stylesheet" type="text/css" href="{{ site.baseurl| split: '/' | join:'/' }}/css/simplelightbox.min.css" />
       <link rel="stylesheet" type="text/css" href="{{ site.baseurl| split: '/' | join:'/' }}/css/main.css" />
       <link href="atom.xml" type="application/atom+xml" rel="alternate" title="Site ATOM Feed">
@@ -32,7 +34,16 @@
           <p>{{ site.author-bio }}</p>
       </div>
       <nav>
-        <h6>Follow me on</h6>
+        <h6>Elsewhere</h6>
+        <ul>
+          {% if site.website %}
+          <li><a href="{{ site.website}}">Website</a></li>
+          {% endif %}
+          {% if site.blog %}
+          <li><a href="{{ site.blog}}">Blog</a></li>
+          {% endif %}
+        </ul>
+        <h6>Social</h6>
         <ul>
           {% if site.twitter %}
           <li><a target="_blank" href="https://twitter.com/{{ site.twitter }}">Twitter</a></li>

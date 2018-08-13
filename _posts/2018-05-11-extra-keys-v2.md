@@ -8,9 +8,6 @@ thumbnails:
   - url: IMG_20180511_162351.jpg
   - url: IMG_20180511_161332.jpg
   - url: IMG_20180719_162223.jpg
-related: 
-  - 2018-01-17-whats-in-the-box.md
-  - 2018-05-09-extra-keys-v1.md
 ---
 
 Well I took another look at the design of my macro keys project sooner than I expected. I started over with the design of the 3D-printed part of this project, and then moved the buttons and guts over from the previous version.
@@ -25,7 +22,7 @@ int buttonTwo = 8; // Pin 8
 void setup() {
   pinMode(buttonOne, INPUT);
   pinMode(buttonTwo, INPUT);
-  
+
   digitalWrite(buttonOne, HIGH);
   digitalWrite(buttonTwo, HIGH);
 }

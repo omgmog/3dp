@@ -17,7 +17,7 @@ name: OMG3DP!
 description: Adventures in 3D Printing
 email: hello@maxglenister.co.uk
 author: Max Glenister
-author-bio:  For my day job I work as the Lead UX & Front-end developer at Aris Technologies. In my free time I write about code and technology, curate the UX of VR website and organize hack days. <br><br>If you hadn't noticed, I also have an interest in 3D printing!
+author-bio:  This website is a collection of all of the things I've been doing with my 3D Printer. <br><br>You'll find lots of examples of badly modelled things, poorly printed things, and a lot of wasted plastic!
 avatar: assets/images/avatar.jpg
 
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -27,6 +27,8 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github: omgmog
 twitter: omgmog
 thingiverse: omgmog
+website: "https://omgmog.net"
+blog: "https://blog.omgmog.net"
 
 # Google Analytics Tracking ID goes here:
 ga_tracking_id:
@@ -38,7 +40,7 @@ highlighter: rouge
 
 
 
-paginate: 20
+paginate: 100
 paginate_path: "/page/:num"
 
 gems:

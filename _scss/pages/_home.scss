@@ -13,16 +13,16 @@
 
     .p-wrap {
       padding: $spacing-ml $spacing-m;
-      background: $main-color;
+      background: lighten($main-color, 3%);
       transition: .15s;
       overflow: hidden;
       margin: 0;
 
       &:active {
-        background: darken($main-color, 3%);
+        background: darken($main-color, 7%);
       }
       &:hover {
-        background: lighten($main-color, 3%);
+        background: lighten($main-color, 10%);
       }
       @media (max-width: 942px) {
         padding: $spacing-m $spacing-m;

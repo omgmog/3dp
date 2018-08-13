@@ -17,10 +17,6 @@ thumbnails:
 videos:
 - url: VID_20180510_212513.mp4
 
-related: 
-  - 2018-01-17-whats-in-the-box.md
-  - 2018-05-11-extra-keys-v2.md
-
 ---
 
 After my previous macro key project back in January that used full-size arcade buttons, I was itching to make a more compact set of macro keys.

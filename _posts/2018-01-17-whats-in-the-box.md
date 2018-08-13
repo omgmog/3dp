@@ -12,9 +12,6 @@ thumbnails:
   - url: IMG_20180117_120014.jpg
   - url: IMG_20180117_161341.jpg
   - url: IMG_20180117_112343.jpg
-related: 
-  - 2018-05-09-extra-keys-v1.md
-  - 2018-05-11-extra-keys-v2.md
 ---
 
 Well it's a bunch of buttons. This is a macro keyboard, by some description.

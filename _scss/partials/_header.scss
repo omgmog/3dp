@@ -6,7 +6,7 @@ header {
 
 
   .post & {
-    background-color: $main-color;
+    background-color: lighten($main-color, 10%);
     color: #fff;
     border-bottom: .1em solid $secondary-color;
   }

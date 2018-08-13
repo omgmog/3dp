@@ -1,6 +1,7 @@
 // Colors
 
-$main-color:        #34495e;
+// $main-color:        #34495e;
+$main-color:        #111211;
 $secondary-color:   darken($main-color, 10%);
 
 $bg-color:          white; // background-color
@@ -13,8 +14,8 @@ $smoke-color:       #fafafa;
 
 // Typography
 
-$font-family:       'Open Sans', sans-serif;
-$variant-family:    'Lora', Georgia, serif;
+$font-family:       'Share Tech Mono', monospace;
+$variant-family:    'Share Tech Mono', monospace;
 $font-size-l:       1.25em; // font-size on desktop type screens
 $font-size-m:       $font-size-l * 0.9; // font-size under 942px wide screens
 $font-size-s:       $font-size-l * 0.7; // font-size under 642px wide screens

@@ -27,33 +27,18 @@ layout: default
         {% endfor %}
       {% endif %}
       {% include thumbnails.html thumbs=page.thumbnails clickable="True" big="True" %}
-    <div>
-      {% if page.related %}
-        <h4>Related posts</h4>
-        <ul lass="related">
-          {% for link in page.related %}
-              {% for _post in site.posts %}
-                {% capture target %}_posts/{{ link }}{%endcapture %}
-                {% if _post.path == target %}
-                  <li><a href="{{ _post.url }}">{{ _post.title }}</a></li>
-                {% endif %}
-              {% endfor %}
-          {% endfor %}
-        </ul>
-      {% endif %}
-    </div>
   </article>
 </section>
 
 <div class="pagination">
-  {% if page.next %}
-  <a href="{{ site.baseurl }}{{ page.next.url }}" class="newer">Newer</a>
-  {% else %}
-  <span class="next">Newer</span>
-  {% endif %}
   {% if page.previous %}
-  <a href="{{ site.baseurl }}{{ page.previous.url }}" class="older">Older</a>
+  <a href="{{ site.baseurl }}{{ page.previous.url }}" class="newer">Older</a>
   {% else %}
   <span class="previous">Older</span>
+  {% endif %}
+  {% if page.next %}
+  <a href="{{ site.baseurl }}{{ page.next.url }}" class="older">Newer</a>
+  {% else %}
+  <span class="next">Newer</span>
   {% endif %}
 </div>

@@ -8,10 +8,12 @@ thumbnails:
   - url: IMG_20171108_214940.jpg
 ---
 
-Now that I've got my calibration issues mostly sorted, I'm enjoying printing some great models from Thingiverse.
+I'm enjoying printing some great models from Thingiverse.
 
 This little elephant is an articulated _print-in-place_ model. It prints in one piece, and then the legs sort of snap to become moveable.
 
-I printed mine on a _raft_ to help with the wonky bed calibration that I've got, and due to the scale this meant that the elephants trunk snapped off when removing the raft. The print is a lot smoother in real life than in the photos, with the individual layers almost imperceptible to touch.
+I printed mine on a _raft_ to help with the wonky bed calibration that I've got, and at a smaller scale to print it faster. Due to the scale the elephants trunk snapped off when removing the raft.
+
+The print is a lot smoother in real life than in the photos, with the individual layers almost imperceptible to touch.
 
 Here's the model on Thingiverse: [https://www.thingiverse.com/thing:257911](https://www.thingiverse.com/thing:257911)
